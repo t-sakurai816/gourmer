@@ -1,6 +1,7 @@
 import React, { useState, /*useEffect*/ } from 'react';
 import TinderCard from 'react-tinder-card';
 // import database from './firebase'
+import LaunchIcon from '@material-ui/icons/Launch';
 import './TinderCards.css'
 
 const TinderCards = () => {
@@ -36,9 +37,9 @@ const TinderCards = () => {
     {
       name: 'マンゴツリーキッチン グランスタ',
       imgUrl: 'https://imgfp.hotp.jp/IMGH/26/18/P017032618/P017032618_238.jpg',
-      hpUrl : 'https://www.hotpepper.jp/strJ001026595/?vos=nhppalsa000016',
-      place : '東京都千代田区丸の内１-9-1　ＪＲ東日本東京駅構内B1GRANSTA内',
-      card : '利用不可'
+      hpUrl: 'https://www.hotpepper.jp/strJ001026595/?vos=nhppalsa000016',
+      place: '東京都千代田区丸の内１-9-1　ＪＲ東日本東京駅構内B1GRANSTA内',
+      card: '利用不可'
     }
   ]);
 
@@ -56,21 +57,13 @@ const TinderCards = () => {
     console.log(myidentifier + 'left the screen')
   }
 
-  //Piece of code which runs based on a condition
-  // useEffect(() => {
-  //   //this is where the code runs...
 
-  //   const unsubscribe = database
-  //     .collection('shopInfos')
-  //     .onSnapshot((snapshot) =>
-  //       setshopInfos(snapshot.docs.map(doc => doc.data()))
-  //     );
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('The lin was clicked.');
+  }
 
-  //   return () => {
-  //     //this is cleanup...
-  //     // unsubscribe();
-  //   };
-  // }, []);
+
 
   // BAD
   // const shopInfos = [];
@@ -96,6 +89,7 @@ const TinderCards = () => {
               className="card"
             >
               <h3>{shopInfo.name}</h3>
+              <a href={shopInfo.hpUrl} target="_blank">お店のHP<LaunchIcon fontSize="small"></LaunchIcon></a>
             </div>
           </TinderCard>
         ))}
