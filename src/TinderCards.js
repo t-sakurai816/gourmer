@@ -4,21 +4,44 @@ import TinderCard from 'react-tinder-card';
 import './TinderCards.css'
 
 const TinderCards = () => {
-  const [people, /*setPeople*/] = useState([
+  const [shopInfos, /*setshopInfos*/] = useState([
     {
-      name:'肉バルダイニング MEAT DE MEET ニュー新橋ビル店',
-      url : 'https://imgfp.hotp.jp/IMGH/59/54/P031835954/P031835954_238.jpg'
+      name: '天喜代 東京駅グランルーフ店',
+      imgUrl: 'https://imgfp.hotp.jp/IMGH/10/20/P022161020/P022161020_238.jpg',
+      hpUrl: 'https://www.hotpepper.jp/strJ001038697/?vos=nhppalsa000016',
+      place: '東京都千代田区丸の内１－９－１　グランルーフＢ１',
+      card: '利用可'
     },
     {
-      name: '日本酒と個室居酒屋 まぐろ奉行とかに代官 新橋店',
-      url : 'https://imgfp.hotp.jp/IMGH/70/71/P035287071/P035287071_238.jpg'
+      name: 'はせがわ酒店 東京駅グランスタ店',
+      imgUrl: 'https://imgfp.hotp.jp/IMGH/81/68/P012258168/P012258168_238.jpg',
+      hpUrl: 'https://www.hotpepper.jp/strJ000699253/?vos=nhppalsa000016',
+      place: '東京都千代田区丸の内１-9-1　JR東京駅構内地下1F',
+      card: '利用可'
     },
     {
-      name: '個室居酒屋 峰八 みねはち 新橋本店',
-      url: 'https://imgfp.hotp.jp/IMGH/67/27/P036246727/P036246727_238.jpg'
+      name: 'Japanese Malt Whisky SAKURA グランスタ東京店',
+      imgUrl: 'https://imgfp.hotp.jp/IMGH/48/66/P036294866/P036294866_238.jpg',
+      hpUrl: 'https://www.hotpepper.jp/strJ001249579/?vos=nhppalsa000016',
+      place: '東京都千代田区丸の内１-9-1 JR東日本東京駅改札内 グランスタ東京地下1階',
+      card: '利用可'
+    },
+    {
+      name: '果実園 東京店',
+      imgUrl: 'https://imgfp.hotp.jp/IMGH/97/48/P023319748/P023319748_238.jpg',
+      hpUrl: 'https://www.hotpepper.jp/strJ001011923/?vos=nhppalsa000016',
+      place: '東京都千代田区丸の内１-9-1 東京駅　改札外 1F キッチンストリート',
+      card: '利用可'
+    },
+    {
+      name: 'マンゴツリーキッチン グランスタ',
+      imgUrl: 'https://imgfp.hotp.jp/IMGH/26/18/P017032618/P017032618_238.jpg',
+      hpUrl : 'https://www.hotpepper.jp/strJ001026595/?vos=nhppalsa000016',
+      place : '東京都千代田区丸の内１-9-1　ＪＲ東日本東京駅構内B1GRANSTA内',
+      card : '利用不可'
     }
   ]);
-  
+
   const onSwipe = (direction) => { //スワイプの方向
     console.log('You swiped: ' + direction)
     // if(direction === 'right'){
@@ -38,9 +61,9 @@ const TinderCards = () => {
   //   //this is where the code runs...
 
   //   const unsubscribe = database
-  //     .collection('people')
+  //     .collection('shopInfos')
   //     .onSnapshot((snapshot) =>
-  //       setPeople(snapshot.docs.map(doc => doc.data()))
+  //       setshopInfos(snapshot.docs.map(doc => doc.data()))
   //     );
 
   //   return () => {
@@ -50,35 +73,35 @@ const TinderCards = () => {
   // }, []);
 
   // BAD
-  // const people = [];
-  // people.push('sonny', 'qazi')
+  // const shopInfos = [];
+  // shopInfos.push('sonny', 'qazi')
 
   // GOOD(Push to an array in React)
-  // setPeople([...people, 'sonny','qazi'])
+  // setshopInfos([...shopInfos, 'sonny','qazi'])
 
   return (
     <div>
       {/* <h1>Tinder Cards</h1> */}
       <div className="tinderCards__cardContainer">
-        {people.map(person => (
+        {shopInfos.map(shopInfo => (
           <TinderCard
             onSwipe={onSwipe}
             onCardLeftScreen={() => onCardLeftScreen('fooBar')} //スワイプ終了後に呼び出される
             className="swipe"
-            key={person.name}
+            key={shopInfo.name}
             preventSwipe={['up', 'down']} //up, downにスワイプを阻止
           >
             <div
-              style={{ backgroundImage: `url(${person.url})` }}
+              style={{ backgroundImage: `url(${shopInfo.imgUrl})` }}
               className="card"
             >
-              <h3>{person.name}</h3>
+              <h3>{shopInfo.name}</h3>
             </div>
           </TinderCard>
         ))}
       </div>
       <div className="swipeDirection">
-          {/* <p>hoge</p> */}
+        {/* <p>hoge</p> */}
         <p></p>
       </div>
     </div>
