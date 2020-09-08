@@ -21,7 +21,7 @@ const Header = ({backButton}) => {
       )}
 
       <Link to="/">
-        <img className="header__logo" src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png" alt="tinder-logo" />
+        <img className="header__logo" src="https://icooon-mono.com/i/icon_11165/icon_111651_64.png" alt="Gourmer-logo" />
       </Link>
       
       <Link to="/chat">
