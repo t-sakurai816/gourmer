@@ -4,7 +4,6 @@ import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
 import Chats from './Chats';
 import ChatScreen from './ChatScreen';
-import PrintJson from './PrintJson';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
