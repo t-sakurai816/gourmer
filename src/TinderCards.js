@@ -2,10 +2,12 @@ import React, { useState, /*useEffect*/ } from 'react';
 import TinderCard from 'react-tinder-card';
 // import database from './firebase'
 import LaunchIcon from '@material-ui/icons/Launch';
+import StarIcon from '@material-ui/icons/StarRate';
+import IconButton from '@material-ui/core/IconButton';
 import './TinderCards.css'
 
 const TinderCards = () => {
-  const [shopInfos, /*setshopInfos*/] = useState([
+  const [shopInfos] = useState([
     {
       name: '天喜代 東京駅グランルーフ店',
       imgUrl: 'https://imgfp.hotp.jp/IMGH/10/20/P022161020/P022161020_238.jpg',
@@ -58,10 +60,6 @@ const TinderCards = () => {
   }
 
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log('The lin was clicked.');
-  }
 
 
 
@@ -89,7 +87,9 @@ const TinderCards = () => {
               className="card"
             >
               <h3>{shopInfo.name}</h3>
-              <a href={shopInfo.hpUrl} target="_blank">お店のHP<LaunchIcon fontSize="small"></LaunchIcon></a>
+              <h4>カード{shopInfo.card}</h4>
+              <a href={shopInfo.hpUrl} target="_blank" rel="noopener noreferrer">お店のHP<LaunchIcon fontSize="small"></LaunchIcon></a>
+              {/* <Link to={shopInfo.hpUrl} target="_blank">hogehoge</Link> */}
             </div>
           </TinderCard>
         ))}
