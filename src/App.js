@@ -4,6 +4,7 @@ import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
 import Chats from './Chats';
 import ChatScreen from './ChatScreen';
+import CopyRight from './CopyRight';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -21,6 +22,10 @@ const App = () => {
           <Route path="/chat">
             <Header backButton="/" />
             <Chats />
+          </Route>
+          <Route path="/copy-right">
+            <Header backButton="/"/>
+            <CopyRight />
           </Route>
           <Route path="/"> {/*1番上に持ってきてはいけない*/}
             <Header />
