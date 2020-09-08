@@ -2,8 +2,6 @@ import React, { useState, /*useEffect*/ } from 'react';
 import TinderCard from 'react-tinder-card';
 // import database from './firebase'
 import LaunchIcon from '@material-ui/icons/Launch';
-import StarIcon from '@material-ui/icons/StarRate';
-import IconButton from '@material-ui/core/IconButton';
 import './TinderCards.css'
 
 const TinderCards = () => {
