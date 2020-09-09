@@ -4,6 +4,15 @@
   padding-top:10%;
 }
 
+.query {
+  color:blue;
+  text-decoration: underline;
+}
+
+.query:hover{
+  color:lightblue;
+}
+
 .hotpaper {
   padding-top:10%;
   text-align:center;
