@@ -10,7 +10,7 @@
   /* box-shadow: 0px 18px 53px 0px rgba(0,0,0,0.3); */
 }
 
-.card > h3 { /*店名*/
+.shopInfo > h3 { /*店名*/
   position: absolute;
   bottom: 40px;
   color: white;
@@ -25,10 +25,12 @@
        0px -2px 1px #000000; 
 }
 
-.card > a { /*店のリンク*/
-  position: absolute;
-  bottom: 10px;
-  /* padding-top:480px; */
+.shopInfo > a { /*店のリンク*/
+  position: absolute !important;
+  /* z-index:9999 !important; */
+  /* padding: 30px; */
+  bottom: 10px !important;
+  /* padding-top:460px; */
   color: rgb(238, 243, 245);
   text-shadow    : 
        2px  2px 1px #000000,
@@ -43,7 +45,8 @@
 
 .card > h4 { /*カード情報*/
   position: absolute;
-  padding-left: 63%;
+  /* padding-left: 63%; */
+  margin-left: 63%;
   bottom: 10px;
   /* padding-top:480px; */
   color: rgb(238, 243, 245);

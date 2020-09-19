@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/"> {/*1番上に持ってきてはいけない*/}
             <Header />
             <TinderCards />
-            <SwipeButtons />
+            {/* <SwipeButtons /> */}
             {/* <PrintJson /> */}
           </Route>
         </Switch>
